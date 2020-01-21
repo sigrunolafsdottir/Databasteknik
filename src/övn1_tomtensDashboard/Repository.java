@@ -18,6 +18,7 @@ public class Repository {
         try {
             p.load(new FileInputStream("src/övn1_tomtensDashboard/Settings.properties"));
             Class.forName("com.mysql.jdbc.Driver");
+            //I senare versioner: com.mysql.cj.jdbc.Driver
         }
         catch (Exception e){
             e.printStackTrace();

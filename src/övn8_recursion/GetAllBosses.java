@@ -23,11 +23,12 @@ public class GetAllBosses {
             new Elf(10,"AAAA", 8), 
             new Elf(11,"AAAAA", 10),
             new Elf(12,"BA", 3),
-            new Elf(12,"BB", 3),
-            new Elf(12,"CA", 4)
+            new Elf(13,"BB", 3),
+            new Elf(14,"CA", 4)
             );
     
-    public List<String> getAllBosses(Elf elfToCheck, List<String> bosses){        
+    public List<String> getAllBosses(Elf elfToCheck, 
+            List<String> bosses){        
         
         for(Elf e : elfs){
             if (e.getId() == elfToCheck.getBoss()){
@@ -43,10 +44,12 @@ public class GetAllBosses {
         Scanner sc = new Scanner(System.in);
         
         while(true){
-            System.out.println("Get all bosses for what index in elf list:");
+            System.out.println("Get all bosses "
+                    + "for what index in elf list:");
             index = sc.nextInt();
             List<String> bosses = new ArrayList<>();
-            System.out.println(getAllBosses(elfs.get(index), bosses));
+            System.out.println(getAllBosses
+                (elfs.get(index), bosses));
         }
     }
     

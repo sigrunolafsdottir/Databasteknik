@@ -24,13 +24,14 @@ public class GetAllUnderlings {
             new Elf(10,"AAAA", 8), 
             new Elf(11,"AAAAA", 10),
             new Elf(12,"BA", 3),
-            new Elf(12,"BB", 3),
-            new Elf(12,"CA", 4)
+            new Elf(13,"BB", 3),
+            new Elf(14,"CA", 4)
             );
     
     public List<String> getAllUnderlings(Elf elfToCheck, List<String> underlings){     
         List <Elf> tempUnderlings = elfs.stream()
-                .filter(e -> e.getBoss() == elfToCheck.getId())
+                .filter(e -> e.getBoss() 
+                        == elfToCheck.getId())
                 .collect(Collectors.toList());
         for(Elf e : tempUnderlings){
             underlings.add(e.getName());

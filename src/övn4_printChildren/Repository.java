@@ -50,7 +50,8 @@ public class Repository {
             rs = stmt.executeQuery();
             
             while (rs.next()) {
-                presents.add(new Present(rs.getInt("id"),rs.getString("name")));
+                presents.add(new Present(
+                        rs.getInt("id"),rs.getString("name")));
             }
         }
         catch (Exception e){
@@ -92,7 +93,8 @@ public class Repository {
         Country country = new Country();    
         ResultSet rs = null;
         String query = "select country.id, country.name "
-                + "from country inner join child on child.countryId=country.id "
+                + "from country inner join child "
+                + "on child.countryId=country.id "
                 + "where child.id = ?";
         
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
@@ -104,7 +106,8 @@ public class Repository {
             rs = stmt.executeQuery();
             
             while (rs.next()) {
-                country = new Country(rs.getInt("id"),rs.getString("name"));
+                country = new Country(
+                        rs.getInt("id"),rs.getString("name"));
             }
         }
         catch (Exception e){
@@ -119,8 +122,10 @@ public class Repository {
         List<Present> wishlist = getWishlistForChildByChildId(id);
         List<Present> gifts = getGiftsForChildByChildId(id);
         ResultSet rs = null;
-        String query = "select child.id, child.name, child.address, child.nice "
-                + "from child inner join country on child.countryId = country.id "
+        String query = "select child.id, child.name, child.address, "
+                + "child.nice "
+                + "from child inner join country on "
+                + "child.countryId = country.id "
                 + "where child.id = ?";
         
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
@@ -160,7 +165,8 @@ public class Repository {
             }
             
             children = allChildIds.stream()
-                    .map(i -> getChildById(i)).collect(Collectors.toList());
+                    .map(i -> getChildById(i))
+                    .collect(Collectors.toList());
         }
         catch (Exception e){
             e.printStackTrace();

@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 public class VerySimpleDemo {
 
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException, Exception {
         
         Class.forName("com.mysql.jdbc.Driver");
         
@@ -27,7 +27,7 @@ public class VerySimpleDemo {
                     + "city from customer");
 
             while (rs.next()) {
-                int id = rs.getInt("idgfdgd");
+                int id = rs.getInt("idx");
                 String name = rs.getString("name");
                 String city = rs.getString("city");
 
@@ -37,9 +37,14 @@ public class VerySimpleDemo {
         } catch (SQLException e) {
             e.printStackTrace();
             
+            Exception ex = new Exception();
+            throw ex;
         }
 
         finally {
+            
+            System.out.println("Doing finally stuff");
+            
             if(rs != null)
                 try {
                     rs.close();
@@ -59,6 +64,8 @@ public class VerySimpleDemo {
                     e.printStackTrace();
                 }
         }
+        
+        System.out.println("Doing AFTER-finally stuff");
     }
     
 }
