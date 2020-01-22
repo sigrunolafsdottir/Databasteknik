@@ -35,6 +35,7 @@ public class Repository {
              ResultSet rs = stmt.executeQuery("select * from elf")){
             
             while (rs.next()) {
+          
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 allElves.add(new Elf(id, name));

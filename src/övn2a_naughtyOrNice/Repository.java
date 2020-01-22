@@ -24,22 +24,26 @@ public class Repository {
     }
 
     public Child getChildByName(String name){
-        Child child = new Child();      
+        //Child child = new Child();      
 
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
                              p.getProperty("name"),
                              p.getProperty("password"));
              Statement stmt = con.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT * FROM child WHERE name='"+name + "'");){
+            //SELECT * FROM child WHERE name='_Doris_'
+            
+            Child child = null;
             
             while (rs.next()) {
                 child = new Child(rs.getInt("id"),rs.getString("name"),rs.getBoolean("nice"));
             }
+            return child;
         }
         catch (Exception e){
             e.printStackTrace();
         }
-        return child;
+        return null;
     }
 
 }

@@ -25,7 +25,7 @@ public class Repository {
     }
 
     public Child getChildByName(String name){
-        Child child = new Child();
+        //Child child = new Child();
         ResultSet rs = null;
         
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
@@ -35,24 +35,18 @@ public class Repository {
             
             stmt.setString(1, name);
             rs = stmt.executeQuery();
-            
+            Child child = null;
             
             while (rs.next()) {
                 child = new Child(rs.getInt("id"),rs.getString("name"),rs.getBoolean("nice"));
             }
+            return child;
         }
         catch (Exception e){
             e.printStackTrace();
         }
-        finally {
-            if(rs != null)
-                try {
-                    rs.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-        }
-        return child;
+        
+        return null;
     }
 
 }

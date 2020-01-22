@@ -19,15 +19,17 @@ public class VerySimpleDemo2 {
                              "sigrun",
                              "secretpassword");
             Statement stmt =  con.createStatement();
-            ResultSet rs = stmt.executeQuery("select id, name, city from customer")) {
+            ResultSet rs = stmt.executeQuery("select id, name, city from customer")) 
+        {
 
             while (rs.next()) {
+                String city = rs.getString("city");
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
-                String city = rs.getString("city");
+                
 
                 System.out.println("id: " + id + ", name: " + name + ", city: " + city);
-        }
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

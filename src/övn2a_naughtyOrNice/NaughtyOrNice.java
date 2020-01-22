@@ -13,7 +13,12 @@ public class NaughtyOrNice {
         while(true){
             System.out.println("Name of child: ");
             name = sc.nextLine().trim();
-            r.getChildByName(name).printOut();
+            try{
+                r.getChildByName(name).printOut();
+            }
+            catch (NullPointerException e){
+                System.out.println(name +"does not exist in the databse");
+            }
 
         }
     }
