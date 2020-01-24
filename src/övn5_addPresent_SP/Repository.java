@@ -14,7 +14,7 @@ public class Repository {
     
     public Repository(){
         try {
-            p.load(new FileInputStream("src/övn5_callable/Settings.properties"));
+            p.load(new FileInputStream("src/övn5_addPresent_SP/Settings.properties"));
             Class.forName("com.mysql.jdbc.Driver");
         }
         catch (Exception e){

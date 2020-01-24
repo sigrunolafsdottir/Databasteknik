@@ -26,7 +26,7 @@ public class Repository {
     
     public String deleteElf(String elfName){
        
-        String query = "delete from  elf  where name like ?;";
+        String query = "delete from  elf  where name = ?;";
         String errormessage = "";
         int rowChanged = 0;
                 
