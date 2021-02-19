@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3077400-7c12-4ec9-a9a2-4c09345267da" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Databas.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ce90bd98-ce45-45c3-acee-7da9e220a473.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ce90bd98-ce45-45c3-acee-7da9e220a473/storage_v2/_src_/schema/myclothesshop.EjJOYA.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/ce90bd98-ce45-45c3-acee-7da9e220a473/storage_v2/_src_/schema/myclothesshop.EjJOYA.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/dbkurs/VerySimpleDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/dbkurs/VerySimpleDemo2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn10_map/Dashboard.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn10_map/Elf.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn10_map/Repository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn10_map/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn1_tomtensDashboard/Dashboard.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn1_tomtensDashboard/Elf.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn1_tomtensDashboard/Repository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn1_tomtensDashboard/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn2a_naughtyOrNice/Child.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn2a_naughtyOrNice/NaughtyOrNice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn2a_naughtyOrNice/Repository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn2a_naughtyOrNice/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn2b_naughtyOrNice/Child.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn2b_naughtyOrNice/NaughtyOrNice2b.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn2b_naughtyOrNice/Repository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn2b_naughtyOrNice/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn3a_nameChange/NameChange.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn3a_nameChange/Repository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn3a_nameChange/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn3b_deleteNisse/DeleteNisse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn3b_deleteNisse/Repository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn3b_deleteNisse/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn3c_addPresent/AddPresent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn3c_addPresent/Repository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn3c_addPresent/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn4_printChildren/Models/Child.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn4_printChildren/Models/Country.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn4_printChildren/Models/Present.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn4_printChildren/PrintAllChildren.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn4_printChildren/Repository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn4_printChildren/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn5_addPresent_SP/AddPresent.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn5_addPresent_SP/Repository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn5_addPresent_SP/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn6_addManufacturingElf/AddManufacturingElf.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn6_addManufacturingElf/Repository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn6_addManufacturingElf/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn6b_addManufacturingElfResignal/AddManufacturingElf.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn6b_addManufacturingElfResignal/Repository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn6b_addManufacturingElfResignal/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/Controller/PartyController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/Huvudprogrammet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/JulfestSettings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/Models/Julfest/DtoPartyNisse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/Models/Nisse/DtoElf.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/Models/Nisse/DtoIntelligenceElf.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/Models/Nisse/DtoMakerElf.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/NisseSettings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/Repository/JulfestRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/Repository/NisseRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/View/JulfestDejtPrinter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/ViewModels/Nisse.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn7_nissarnas_dejtingförslagsprogram/ViewModels/NissePar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn8_recursion/Elf.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn8_recursion/GetAllBosses.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn8_recursion/GetAllUnderlings.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn9_transaktioner/AddChild.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn9_transaktioner/Repository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Databas/övn9_transaktioner/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn1_tomtensDashboard/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn2a_naughtyOrNice/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn2b_naughtyOrNice/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn3a_nameChange/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn3b_deleteNisse/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn3c_addPresent/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn4_printChildren/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn5_addPresent_SP/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn6_addManufacturingElf/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn6b_addManufacturingElfResignal/AddManufacturingElf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn6b_addManufacturingElfResignal/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn6b_addManufacturingElfResignal/Settings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn7_nissarnas_dejtingförslagsprogram/JulfestSettings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn7_nissarnas_dejtingförslagsprogram/NisseSettings.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/övn9_transaktioner/Settings.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbkurs/VerySimpleDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbkurs/VerySimpleDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbkurs/VerySimpleDemo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbkurs/VerySimpleDemo2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/övn1_tomtensDashboard/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/övn1_tomtensDashboard/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/övn2a_naughtyOrNice/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/övn2a_naughtyOrNice/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/övn2b_naughtyOrNice/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/övn2b_naughtyOrNice/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/övn5_addPresent_SP/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/övn5_addPresent_SP/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/övn6_addManufacturingElf/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/övn6_addManufacturingElf/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/övn9_transaktioner/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/övn9_transaktioner/Repository.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MyClothesShop@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MyClothesShop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MyClothesShop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="myclothesshop: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MyClothesShop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="myclothesshop: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MyClothesShop@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="myclothesshop: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="brand: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/övn1_tomtensDashboard/Repository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/övn3a_nameChange/Repository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="25" column="69" lean-forward="true" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/övn1_tomtensDashboard/Dashboard.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="13" column="38" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/övn5_addPresent_SP/AddPresent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/övn5_addPresent_SP/Settings.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/övn5_addPresent_SP/Repository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ce90bd98-ce45-45c3-acee-7da9e220a473/console.sql" />
+        <option value="$PROJECT_DIR$/src/dbkurs/VerySimpleDemo.java" />
+        <option value="$PROJECT_DIR$/src/dbkurs/VerySimpleDemo2.java" />
+        <option value="$PROJECT_DIR$/src/övn9_transaktioner/Repository.java" />
+        <option value="$PROJECT_DIR$/src/övn1_tomtensDashboard/Repository.java" />
+        <option value="$PROJECT_DIR$/src/övn6_addManufacturingElf/Repository.java" />
+        <option value="$PROJECT_DIR$/src/övn6b_addManufacturingElfResignal/Repository.java" />
+        <option value="$PROJECT_DIR$/src/övn2a_naughtyOrNice/Repository.java" />
+        <option value="$PROJECT_DIR$/src/övn2b_naughtyOrNice/Repository.java" />
+        <option value="$PROJECT_DIR$/src/övn5_addPresent_SP/Repository.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/Databas.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/sbt.xml" />
+        <option value="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_23.xml" />
+        <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1953" />
+    <option name="y" value="57" />
+    <option name="width" value="1615" />
+    <option name="height" value="946" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Databas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Databas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Databas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Databas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Databas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Databas" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="övn9_transaktioner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Databas" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Course" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mysql-connector-java-8.0.23/mysql-connector-java-8.0.23.jar!/" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.AddPresent">
+    <configuration name="AddManufacturingElf" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="övn6_addManufacturingElf.AddManufacturingElf" />
+      <module name="Databas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="övn6_addManufacturingElf.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddPresent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="övn5_addPresent_SP.AddPresent" />
+      <module name="Databas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="övn5_addPresent_SP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Dashboard" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="övn1_tomtensDashboard.Dashboard" />
+      <module name="Databas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="övn1_tomtensDashboard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NaughtyOrNice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="övn2a_naughtyOrNice.NaughtyOrNice" />
+      <module name="Databas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="övn2a_naughtyOrNice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NaughtyOrNice2b" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="övn2b_naughtyOrNice.NaughtyOrNice2b" />
+      <module name="Databas" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="övn2b_naughtyOrNice.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AddPresent" />
+        <item itemvalue="Application.NaughtyOrNice2b" />
+        <item itemvalue="Application.NaughtyOrNice" />
+        <item itemvalue="Application.Dashboard" />
+        <item itemvalue="Application.AddManufacturingElf" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$USER_HOME$/OneDrive/Dokument/Scala/övningsprojekt/example" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3077400-7c12-4ec9-a9a2-4c09345267da" name="Default Changelist" comment="" />
+      <created>1613556555232</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613556555232</updated>
+      <workItem from="1613556556739" duration="1881000" />
+      <workItem from="1613634440114" duration="13671000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15552000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1953" y="57" width="1615" height="946" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2527331" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22878228" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Console" order="7" weight="0.3296433" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.22186495" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ce90bd98-ce45-45c3-acee-7da9e220a473/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbkurs/VerySimpleDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dbkurs/VerySimpleDemo2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="33" column="32" lean-forward="true" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/90414d57-17af-43d6-9746-e5b797e845a0/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn9_transaktioner/AddChild.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="12" column="23" lean-forward="true" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn9_transaktioner/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn1_tomtensDashboard/Settings.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn6_addManufacturingElf/AddManufacturingElf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn6b_addManufacturingElfResignal/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn6_addManufacturingElf/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-152">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn2a_naughtyOrNice/Settings.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn1_tomtensDashboard/Elf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn2a_naughtyOrNice/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn2a_naughtyOrNice/NaughtyOrNice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn2a_naughtyOrNice/Child.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn2b_naughtyOrNice/Settings.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="64" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn2b_naughtyOrNice/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="37" column="31" lean-forward="true" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn2b_naughtyOrNice/NaughtyOrNice2b.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn2b_naughtyOrNice/Child.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn3a_nameChange/NameChange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn3c_addPresent/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn4_printChildren/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn1_tomtensDashboard/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn3a_nameChange/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="25" column="69" lean-forward="true" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn1_tomtensDashboard/Dashboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn5_addPresent_SP/Settings.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn5_addPresent_SP/AddPresent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/övn5_addPresent_SP/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Databas</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>mysql-connector-java-8.0.23</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

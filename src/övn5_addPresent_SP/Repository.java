@@ -15,7 +15,7 @@ public class Repository {
     public Repository(){
         try {
             p.load(new FileInputStream("src/övn5_addPresent_SP/Settings.properties"));
-            Class.forName("com.mysql.jdbc.Driver");
+            //Class.forName("com.mysql.jdbc.Driver");
         }
         catch (Exception e){
             e.printStackTrace();
@@ -25,17 +25,20 @@ public class Repository {
     public String addPresent(String presentName){
        
         ResultSet rs = null;
-        String query = "call addPresent(?)";
+        String query = "call addGiftDemo(?, ?)";
+        //String query = "call addPresentErrorHandler(?)";
                 
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
                              p.getProperty("name"),
                              p.getProperty("password"));
              CallableStatement stmt = con.prepareCall(query)){
 
-            stmt.setString(1, presentName);
+            stmt.setString(1, "Ambra");
+            stmt.setString(2, presentName);
             rs = stmt.executeQuery();
         }
         catch (Exception e){
+            System.out.println("e.mess "+e.getMessage());
             return "Could not add present "+presentName;
         }
         return presentName +" was added to database.";

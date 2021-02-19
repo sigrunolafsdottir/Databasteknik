@@ -1,5 +1,6 @@
-package övn6_addManufacturingElf;
+package övn6b_addManufacturingElfResignal;
 
+import övn6_addManufacturingElf.*;
 import java.io.FileInputStream;
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -22,13 +23,12 @@ public class Repository {
             e.printStackTrace();
         }
     }
-    
-    
-    //Fångar felmeddelanden med select
+      
+    //felhantering med resignal i handlers
     public String addManufacturingElf(String elfName){
        
         ResultSet rs = null;
-        String query = "call addManufacturingElf(?)";
+        String query = "call addManufacturingElfResignal(?)";
         
         String errormessage = "";
                 
@@ -40,17 +40,14 @@ public class Repository {
             stmt.setString(1, elfName);
             rs = stmt.executeQuery();
             
-            //om vi skickar ett selectat errormessage fångar vi det här
-            while (rs != null && rs.next()) {
-                errormessage = rs.getString("error");
-            }
-            if (!errormessage.equals("")) {
-                return errormessage;
-            }
         }
-       
+        catch (SQLException e){
+            //om vi resignal fångar vi det här
+            System.out.println(e.getMessage() +"("+e.getErrorCode()+")");
+            return "Could not add elf "+elfName;
+        }
         catch (Exception e){
-           
+            //vi bör aldrig komma hit
             e.printStackTrace();
             return "Could not add elf "+elfName;
         }

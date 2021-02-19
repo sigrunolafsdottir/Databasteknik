@@ -10,7 +10,7 @@ public class VerySimpleDemo {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException, Exception {
         
-        Class.forName("com.mysql.jdbc.Driver");
+        //Class.forName("com.mysql.cj.jdbc.Driver");
         
         Connection con = null;
         Statement stmt = null;
@@ -18,7 +18,7 @@ public class VerySimpleDemo {
         
         try{
             con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/MyClothesShop",
+                "jdbc:mysql://localhost:3306/MyClothesShop?serverTimezone=UTC&useSSL=false",
                 "sigrun",
                 "secretpassword");
 
@@ -27,13 +27,13 @@ public class VerySimpleDemo {
                     + "city from customer");
 
             while (rs.next()) {
-                int id = rs.getInt("idx");
+                int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String city = rs.getString("city");
 
                 System.out.println("id: " + id + 
                     ", name: " + name + ", city: " + city);
-        }
+            }
         } catch (SQLException e) {
             e.printStackTrace();
             
