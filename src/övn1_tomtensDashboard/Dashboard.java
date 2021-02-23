@@ -5,9 +5,18 @@ import static java.util.stream.Collectors.toList;
 
 
 public class Dashboard {
+
+    public boolean test = false;
     
     public Dashboard() throws InterruptedException{
-        Repository r = new Repository();
+        IRepository r;
+        if (test){
+            r = new RepositoryMockup();
+        }
+        else{
+            r = new Repository();
+        }
+
         List<Elf> allElves = r.getAllElfs();
         
         while(true){

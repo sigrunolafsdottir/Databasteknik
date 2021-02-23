@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Properties;
 
 
-public class Repository {
+public class Repository implements IRepository {
 
     private Properties p = new Properties();
     
@@ -46,7 +46,7 @@ public class Repository {
         return allElves;
     }
 
-    private int getRowCount(String tableName){
+    public int getRowCount(String tableName){
         int count = -1;
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
                              p.getProperty("name"),
