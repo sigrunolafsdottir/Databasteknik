@@ -11,9 +11,7 @@ import java.sql.Statement;
 public class VerySimpleDemo2 {
 
     public static void main(String[] args) throws ClassNotFoundException {
-        
-        //Class.forName("com.mysql.jdbc.Driver");
-        
+
         try (Connection con = DriverManager.getConnection(
                              "jdbc:mysql://localhost:3306/MyClothesShop",
                              "sigrun",
