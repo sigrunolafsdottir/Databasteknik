@@ -22,10 +22,10 @@ public class Repository {
         }
     }
       
-    public String addPresent(String presentName){
+    public String addPresent(String childName, String presentName){
        
         ResultSet rs = null;
-        String query = "call addGiftDemo(?, ?)";
+        String query = "call insertGift(?, ?)";
         //String query = "call addPresentErrorHandler(?)";
                 
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
@@ -33,14 +33,14 @@ public class Repository {
                              p.getProperty("password"));
              CallableStatement stmt = con.prepareCall(query)){
 
-            stmt.setString(1, "Ambra");
+            stmt.setString(1, childName);
             stmt.setString(2, presentName);
             rs = stmt.executeQuery();
         }
         catch (Exception e){
             System.out.println("e.mess "+e.getMessage());
-            return "Could not add present "+presentName;
+            return "Could not give "+childName+" a "+presentName;
         }
-        return presentName +" was added to database.";
+        return childName + " got a "+ presentName;
     }
 }

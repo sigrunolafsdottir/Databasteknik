@@ -17,7 +17,6 @@ public class Repository {
     public Repository(){
         try{
             p.load(new FileInputStream("src/övn2a_naughtyOrNice/Settings.properties"));
-            //Class.forName("com.mysql.jdbc.Driver");
         }
          catch (Exception e){
             e.printStackTrace();
@@ -25,7 +24,6 @@ public class Repository {
     }
 
     public Child getChildByName(String name){   // Ambrosia'; drop database tomtedb;'
-        //Child child = new Child();
         ResultSet rs = null;
         
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),

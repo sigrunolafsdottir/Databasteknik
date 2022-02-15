@@ -1,19 +1,15 @@
-package övn6_addManufacturingElf;
+package dbkurs.Demo_Felhantering;
 
 import java.io.FileInputStream;
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
 
 
-public class Repository {
+public class RepositoryResignal {
 
     private Properties p = new Properties();
-    
-    public Repository(){
+
+    public RepositoryResignal(){
         try {
             p.load(new FileInputStream("src/övn6_addManufacturingElf/Settings.properties"));
         }
@@ -24,10 +20,10 @@ public class Repository {
     
     
     //Fångar felmeddelanden med select
-    public String addManufacturingElf(String elfName){
+    public String addManufacturingElf(String child, String present){
        
         ResultSet rs = null;
-        String query = "call addManufacturingElf(?)";
+        String query = "call insertGift2(?,?)";
         
         String errormessage = "";
                 
@@ -36,23 +32,22 @@ public class Repository {
                              p.getProperty("password"));
              CallableStatement stmt = con.prepareCall(query)){
 
-            stmt.setString(1, elfName);
+            stmt.setString(1, child);
+            stmt.setString(2, present);
             rs = stmt.executeQuery();
-            
-            //om vi skickar ett selectat errormessage fångar vi det här
-            while (rs != null && rs.next()) {
-                errormessage = rs.getString("error");
-            }
-            if (!errormessage.equals("")) {
-                return errormessage;
-            }
+
         }
-       
+
+        catch (SQLException e){
+            //om vi resignal fångar vi det här
+            System.out.println(e.getMessage() +" ("+e.getErrorCode()+")");
+            return "Gåvan misslyckades";
+        }
         catch (Exception e){
-           
+           //vi bör aldrig komma hit
             e.printStackTrace();
-            return "Could not add elf "+elfName;
+            return "Gåvan misslyckades";
         }
-        return elfName +" was added to database.";
+        return "Allt gick bra";
     }
 }

@@ -17,7 +17,6 @@ public class Repository {
     public Repository(){
         try{
             p.load(new FileInputStream("src/övn9_transaktioner/Settings.properties"));
-            //Class.forName("com.mysql.jdbc.Driver");
         }
          catch (Exception e){
             e.printStackTrace();
@@ -79,9 +78,9 @@ public class Repository {
             }
         }
         catch (SQLException e){
-            //något verkar ha ändrat sig, connectionen stängs ner innan vi har 
-            //en chans att göra vår rollback
-            //e.printStackTrace();
+            //något verkar ha ändrat sig, connectionen stängs ner automatiskt
+            //rollback-en görs också automatiskt
+            e.printStackTrace();
             if (con != null) {
                 try {
                     System.out.print("Transaction is being rolled back");
@@ -93,7 +92,7 @@ public class Repository {
             }
         }
         catch (Exception e){
-            //e.printStackTrace();
+            e.printStackTrace();
             if (con != null) {
                 try {
                     System.out.print("Transaction is being rolled back");

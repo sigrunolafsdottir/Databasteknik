@@ -24,7 +24,6 @@ public class Repository {
     }
 
     public Child getChildByName(String name){
-        //Child child = new Child();      
 
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
                              p.getProperty("name"),
