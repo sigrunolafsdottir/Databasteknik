@@ -16,7 +16,7 @@ public class Repository {
     public Repository(){
         try{
             p.load(new FileInputStream("src/övn2a_naughtyOrNice/Settings.properties"));
-            //Class.forName("com.mysql.cj.jdbc.Driver");
+
         }
          catch (Exception e){
             e.printStackTrace();
