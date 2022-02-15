@@ -24,14 +24,14 @@ public class VerySimpleDemoProperties {
                 p.getProperty("name"),
                 p.getProperty("password"));
              Statement stmt =  con.createStatement();
-             ResultSet rs = stmt.executeQuery("select id, name, city from customer")) {
+             ResultSet rs = stmt.executeQuery("select id, name, address from child")) {
 
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
-                String city = rs.getString("city");
+                String address = rs.getString("address");
 
-                System.out.println("id: " + id + ", name: " + name + ", city: " + city);
+                System.out.println("id: " + id + ", name: " + name + ", address: " + address);
             }
         } catch (SQLException e) {
             e.printStackTrace();

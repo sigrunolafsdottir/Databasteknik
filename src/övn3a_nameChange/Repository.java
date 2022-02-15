@@ -14,7 +14,6 @@ public class Repository {
     public Repository(){
         try {
             p.load(new FileInputStream("src/övn3a_nameChange/Settings.properties"));
-            Class.forName("com.mysql.jdbc.Driver");
         }
         catch (Exception e){
             e.printStackTrace();

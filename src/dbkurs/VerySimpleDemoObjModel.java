@@ -15,23 +15,23 @@ public class VerySimpleDemoObjModel
 
     public static void main(String[] args) throws ClassNotFoundException {
 
-        List <Customer> customers = new ArrayList<>();
+        List <Child> customers = new ArrayList<>();
 
         try (Connection con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/MyClothesShop",
+                "jdbc:mysql://localhost:3306/bigtomtedatabase?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true",
                 "sigrun",
                 "secretpassword");
              Statement stmt =  con.createStatement();
-             ResultSet rs = stmt.executeQuery("select id, name, city from customer")) {
+             ResultSet rs = stmt.executeQuery("select id, name, address from child")) {
 
 
-            Customer tempCustomer;
+            Child tempCustomer;
 
             while (rs.next()) {
-                tempCustomer = new Customer();
+                tempCustomer = new Child();
                 tempCustomer.setId(rs.getInt("id"));
                 tempCustomer.setName(rs.getString("name"));
-                tempCustomer.setCity(rs.getString("city"));
+                tempCustomer.setAddress(rs.getString("address"));
                 customers.add(tempCustomer);
             }
         } catch (SQLException e) {

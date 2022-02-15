@@ -13,20 +13,19 @@ public class VerySimpleDemo2 {
     public static void main(String[] args) throws ClassNotFoundException {
 
         try (Connection con = DriverManager.getConnection(
-                             "jdbc:mysql://localhost:3306/MyClothesShop",
+                             "jdbc:mysql://localhost:3306/bigtomtedatabase?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true",
                              "sigrun",
                              "secretpassword");
             Statement stmt =  con.createStatement();
-            ResultSet rs = stmt.executeQuery("select id, name, city from MyClothesShop.customer"))
+            ResultSet rs = stmt.executeQuery("select id, name, address from child"))
         {
 
             while (rs.next()) {
-                String city = rs.getString("city");
+                String adress = rs.getString("address");
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
-                
 
-                System.out.println("id: " + id + ", name: " + name + ", city: " + city);
+                System.out.println("id: " + id + ", name: " + name + ", address: " + adress);
             }
         } catch (SQLException e) {
             e.printStackTrace();

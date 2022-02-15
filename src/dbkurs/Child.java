@@ -1,17 +1,17 @@
 package dbkurs;
 
 
-public class Customer {
+public class Child {
     private String name;
     private int id;
-    private String city;
+    private String address;
 
-    public Customer() {};
+    public Child() {};
 
-    public Customer(int id, String name, String city){
+    public Child(int id, String name, String address){
         this.id = id;
         this.name = name;
-        this.city = city;
+        this.address = address;
     }
 
     public String getName() {
@@ -30,16 +30,16 @@ public class Customer {
         this.id = id;
     }
 
-    public String getCity() {
-        return city;
+    public String getAddress() {
+        return address;
     }
 
-    public void setCity(String city) {
-        this.city = city;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public void printMe(){
-        System.out.println("Id: "+ id +" Name: "+name+" City "+city);
+        System.out.println("Id: "+ id +" Name: "+name+" Address "+address);
     }
 
 }

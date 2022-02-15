@@ -10,29 +10,27 @@ public class VerySimpleDemo {
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException, Exception {
         
-        //Class.forName("com.mysql.cj.jdbc.Driver");
-        
         Connection con = null;
         Statement stmt = null;
         ResultSet rs = null;
         
         try{
             con = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/MyClothesShop?serverTimezone=UTC&useSSL=false",
+                "jdbc:mysql://localhost:3306/bigtomtedatabase?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true",
                 "sigrun",
                 "secretpassword");
 
             stmt = con.createStatement();
             rs = stmt.executeQuery("select id, name, "
-                    + "city from customer");
+                    + "address from child");
 
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
-                String city = rs.getString("city");
+                String address = rs.getString("address");
 
                 System.out.println("id: " + id + 
-                    ", name: " + name + ", city: " + city);
+                    ", name: " + name + ", address: " + address);
             }
         } catch (SQLException e) {
             e.printStackTrace();

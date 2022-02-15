@@ -17,7 +17,7 @@ public class Dashboard {
             r = new Repository();
         }
 
-        List<Elf> allElves = r.getAllElfs();
+        //List<Elf> allElves = r.getAllElfs();
         
         while(true){
             System.out.println("Number of employees : " +r.getAllElfs().size());
