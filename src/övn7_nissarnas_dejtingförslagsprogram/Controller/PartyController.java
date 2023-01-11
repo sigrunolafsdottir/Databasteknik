@@ -23,6 +23,7 @@ public class PartyController {
         if (allaPartyNisseNamn.size() > 0 ){
             return allaPartyNisseNamn.get(0).getPartyAlias();
         }
+        System.out.println("problem "+ nisseAttSlåUpp.getName());
         return "Björnen Baloo";  //om fel uppstår kan nissen få bli Björnen Baloo
     }
     
@@ -30,26 +31,29 @@ public class PartyController {
         
         List<DtoIntelligenceElf> intelligenceElves = nisseRepo.getAllIntelligenceElfs();
         List<DtoMakerElf> makerElves = nisseRepo.getAllMakerElfs();
+        List<DtoBossElf> bossElves = nisseRepo.getAllBossElfs();
         List<DtoPartyNisse> partyAliases = julfestRepo.getAllPartyNissar();
         List<NissePar> nissePar = new ArrayList<>();
         
+        // eftersom jag vet att det är typ dubbelt så många makerelfs mot de andra
+        List <DtoElf> intelligenceAndBossElves = new ArrayList<>();
+        intelligenceAndBossElves.addAll(intelligenceElves);
+        intelligenceAndBossElves.addAll(bossElves);
+
         int lengthOfShortestElfList = 0;
-        if (intelligenceElves.size() > makerElves.size()){
+        if (intelligenceAndBossElves.size() > makerElves.size()){
             lengthOfShortestElfList = makerElves.size();
         }else
         {
-            lengthOfShortestElfList = intelligenceElves.size();
+            lengthOfShortestElfList = intelligenceAndBossElves.size();
         }
-        
-        //i fas 1 av utvecklingsarbetet av denna app får tyvärr inte
-        //de nissar som inte kan paras ihop  gå på festen
-        //Detta är något som förhoppningsvis kommer att åtgärdas längre fram
-        //eller iallafall före julfesten
-  
+
+        //Om listorna blir olika långa kommer någar att hamna utanför och inte få gå på festen
+
         for (int i = 0; i < lengthOfShortestElfList; i++)
         {
             Nisse nisse1 = new Nisse(getPartyAlias(makerElves.get(i), partyAliases));
-            Nisse nisse2 = new Nisse(getPartyAlias(intelligenceElves.get(i), partyAliases));
+            Nisse nisse2 = new Nisse(getPartyAlias(intelligenceAndBossElves.get(i), partyAliases));
             
             nissePar.add(new NissePar(nisse1, nisse2));
         }

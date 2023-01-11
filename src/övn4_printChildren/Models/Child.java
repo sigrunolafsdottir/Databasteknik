@@ -26,6 +26,10 @@ public class Child {
     }
     
     public Child(){}
+
+    public Child(int id){
+        this.id = id;
+    }
     
     public String getName(){
         return name;
@@ -73,6 +77,13 @@ public class Child {
     
     public void setGifts(List<Present> gifts){
         this.gifts = gifts;
+    }
+
+    public void addGift(Present gift){
+        gifts.add(gift);
+    }
+    public void addWish(Present wish){
+        wishlist.add(wish);
     }
     
     public void print(){

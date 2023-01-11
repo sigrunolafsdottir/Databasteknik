@@ -18,8 +18,7 @@ public class RepositoryResignal {
         }
     }
     
-    
-    //Fångar felmeddelanden med select
+
     public String addManufacturingElf(String child, String present){
        
         ResultSet rs = null;

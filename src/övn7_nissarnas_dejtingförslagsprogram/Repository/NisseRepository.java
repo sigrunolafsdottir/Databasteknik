@@ -17,7 +17,6 @@ public class NisseRepository {
     public NisseRepository(){
         try {
             p.load(new FileInputStream("src/övn7_nissarnas_dejtingförslagsprogram/NisseSettings.properties"));
-            Class.forName("com.mysql.jdbc.Driver");
         }
         catch (Exception e){
             e.printStackTrace();
@@ -36,6 +35,26 @@ public class NisseRepository {
             while (rs.next()) {
                 String name = rs.getString("name");
                 makerElves.add(new DtoMakerElf(name));
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        return makerElves;
+    }
+
+    public List<DtoBossElf> getAllBossElfs(){
+        List<DtoBossElf> makerElves = new ArrayList<>();
+
+        try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
+                p.getProperty("name"),
+                p.getProperty("password"));
+             Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery("select name from elf inner join bosself on bosself.elfId = elf.id;")){
+
+            while (rs.next()) {
+                String name = rs.getString("name");
+                makerElves.add(new DtoBossElf(name));
             }
         }
         catch (Exception e){

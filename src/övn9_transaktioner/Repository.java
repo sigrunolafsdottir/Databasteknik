@@ -12,6 +12,10 @@ import java.util.Properties;
 public class Repository {
 
  private Connection con;
+    PreparedStatement countryCounterStmt = null;
+    PreparedStatement getCountryIdStmt = null;
+    PreparedStatement insertCountryStmt = null;
+    PreparedStatement insertChildStmt = null;
     private Properties p = new Properties();
     
     public Repository(){
@@ -27,20 +31,22 @@ public class Repository {
         ResultSet rs = null;
         int amount = 0;
         int countryId = 0;
-        
-        try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
-                             p.getProperty("name"),
-                             p.getProperty("password"));
-                PreparedStatement countryCounterStmt = con.prepareStatement(
-                      //  "SELECT EXISTS(SELECT * FROM country WHERE name =  ?)"))}
-                        "select count(*) as count from country where name = ?");
-                PreparedStatement getCountryIdStmt = con.prepareStatement(
-                        "select id from country where name = ?");
-                PreparedStatement insertCountryStmt = con.prepareStatement(
-                        "insert into country (name) values (?)");
-                PreparedStatement insertChildStmt = con.prepareStatement(
-                        "insert into child (name, address, countryId) values (?, ?, ?)");
-                        ){
+
+        //Vi får inte tag i con-objektet om vi använder try-with-resources
+        //ref: https://www.mysqltutorial.org/mysql-jdbc-transaction/
+        try {
+            con = DriverManager.getConnection(p.getProperty("connectionString"),
+                    p.getProperty("name"),
+                    p.getProperty("password"));
+            countryCounterStmt = con.prepareStatement(
+                    //  "SELECT EXISTS(SELECT * FROM country WHERE name =  ?)"))}
+                    "select count(*) as count from country where name = ?");
+            getCountryIdStmt = con.prepareStatement(
+                    "select id from country where name = ?");
+            insertCountryStmt = con.prepareStatement(
+                    "insert into country (name) values (?)");
+            insertChildStmt = con.prepareStatement(
+                    "insert into child (name, address, countryId) values (?, ?, ?)");
             
             countryCounterStmt.setString(1, countryName);
             rs = countryCounterStmt.executeQuery();
@@ -101,6 +107,19 @@ public class Repository {
                 catch(SQLException e2) {
                     System.out.println(e2.getMessage());
                 }
+            }
+        }
+        finally {
+            try {
+                if(rs != null)  rs.close();
+                if(countryCounterStmt != null) countryCounterStmt.close();
+                if(getCountryIdStmt != null) getCountryIdStmt.close();
+                if(insertCountryStmt != null) insertCountryStmt.close();
+                if(insertChildStmt != null) insertChildStmt.close();
+                if(con != null) con.close();
+
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
             }
         }
     }

@@ -6,9 +6,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 import java.util.stream.Collectors;
 import övn4_printChildren.Models.*;
 
@@ -21,7 +19,6 @@ public class Repository {
     public Repository(){
         try{
             p.load(new FileInputStream("src/övn4_printChildren/Settings.properties"));
-            Class.forName("com.mysql.jdbc.Driver");
         }
          catch (Exception e){
             e.printStackTrace();

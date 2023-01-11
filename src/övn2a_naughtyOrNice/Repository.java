@@ -35,7 +35,9 @@ public class Repository {
             Child child = null;
             
             while (rs.next()) {
-                child = new Child(rs.getInt("id"),rs.getString("name"),rs.getBoolean("nice"));
+                child = new Child(rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getBoolean("nice"));
             }
             return child;
         }

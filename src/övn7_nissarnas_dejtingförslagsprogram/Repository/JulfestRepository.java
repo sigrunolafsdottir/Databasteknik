@@ -18,7 +18,6 @@ public class JulfestRepository {
     public JulfestRepository(){
         try {
             p.load(new FileInputStream("src/övn7_nissarnas_dejtingförslagsprogram/JulfestSettings.properties"));
-            Class.forName("com.mysql.jdbc.Driver");
         }
         catch (Exception e){
             e.printStackTrace();

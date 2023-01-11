@@ -6,11 +6,16 @@ import övn7_nissarnas_dejtingförslagsprogram.ViewModels.*;
 
 public class JulfestDejtPrinter {
 
-    public JulfestDejtPrinter() {
-        
-        PartyController pc = new PartyController();
-        List<NissePar> np = pc.getPartyPairs();
-        np.forEach(p -> p.printPar());
-        
+    PartyController pc = new PartyController();
+
+    public List<NissePar> getPartyList(){
+
+        return pc.getPartyPairs();
     }
+
+    public void printPartyList(){
+
+        getPartyList().forEach(p -> p.printPar());
+    }
+
 }
