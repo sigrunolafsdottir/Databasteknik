@@ -1,5 +1,6 @@
 package övn4_printChildern_AltSolution;
 
+import com.sun.tools.javac.Main;
 import övn4_printChildern_AltSolution.Models.ChildPresentMapping;
 
 import java.util.List;
@@ -8,8 +9,12 @@ import java.util.stream.Collectors;
 
 public class MainProgram {
 
-    public static void main(String[] args) {
+    String getList(List<ChildPresentMapping> l, String child){
+        return l.stream().filter(x -> x.getChild().getName().equalsIgnoreCase(child))
+                .map(y -> y.getPresent().getName()).collect(Collectors.joining(", "));
+    }
 
+    public MainProgram(){
         Repository r = new Repository();
         List<ChildPresentMapping> wishes = r.getAllWishes();
         List<ChildPresentMapping> gifts = r.getAllGifts();
@@ -19,11 +24,12 @@ public class MainProgram {
             System.out.println("Vilket barn vill du se önskningar och gåvor för?");
             String child = sc.next();
 
-            System.out.println("Önskningar: " + wishes.stream().filter(x -> x.getChild().getName().equalsIgnoreCase(child))
-                    .map(y -> y.getPresent().getName()).collect(Collectors.joining(", ")));
-            System.out.println("Gåvor: " + gifts.stream().filter(x -> x.getChild().getName().equalsIgnoreCase(child)).
-                    map(y -> y.getPresent().getName()).collect(Collectors.joining(", ")));
+            System.out.println("Önskningar: " + getList(wishes, child));
+            System.out.println("Gåvor: " + getList(gifts, child));
         }
+    }
 
+    public static void main(String[] args) {
+        MainProgram m = new MainProgram();
     }
 }
