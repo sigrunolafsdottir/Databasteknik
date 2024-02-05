@@ -9,16 +9,17 @@ import java.util.stream.Collectors;
 
 public class MainProgram {
 
+    final Repository r = new Repository();
+    final List<ChildPresentMapping> wishes = r.getAllWishes();
+    final List<ChildPresentMapping> gifts = r.getAllGifts();
+    final Scanner sc = new Scanner(System.in);
+
     String getList(List<ChildPresentMapping> l, String child){
         return l.stream().filter(x -> x.getChild().getName().equalsIgnoreCase(child))
                 .map(y -> y.getPresent().getName()).collect(Collectors.joining(", "));
     }
 
     public MainProgram(){
-        Repository r = new Repository();
-        List<ChildPresentMapping> wishes = r.getAllWishes();
-        List<ChildPresentMapping> gifts = r.getAllGifts();
-        Scanner sc = new Scanner(System.in);
 
         while(true) {
             System.out.println("Vilket barn vill du se önskningar och gåvor för?");
