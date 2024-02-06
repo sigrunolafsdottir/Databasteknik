@@ -14,9 +14,14 @@ public class MainProgram {
     final List<ChildPresentMapping> gifts = r.getAllGifts();
     final Scanner sc = new Scanner(System.in);
 
-    String getList(List<ChildPresentMapping> l, String child){
+    String getChildList(List<ChildPresentMapping> l, String child){
         return l.stream().filter(x -> x.getChild().getName().equalsIgnoreCase(child))
                 .map(y -> y.getPresent().getName()).collect(Collectors.joining(", "));
+    }
+
+    String getPresentList(List<ChildPresentMapping> l, String present){
+        return l.stream().filter(x -> x.getPresent().getName().equalsIgnoreCase(present))
+                .map(y -> y.getChild().getName()).collect(Collectors.joining(", "));
     }
 
     public MainProgram(){
@@ -25,8 +30,14 @@ public class MainProgram {
             System.out.println("Vilket barn vill du se önskningar och gåvor för?");
             String child = sc.next();
 
-            System.out.println("Önskningar: " + getList(wishes, child));
-            System.out.println("Gåvor: " + getList(gifts, child));
+            System.out.println("Önskningar: " + getChildList(wishes, child));
+            System.out.println("Gåvor: " + getChildList(gifts, child));
+
+            System.out.println("Vilken present vill du se hur den önskats eller givits?");
+            String present = sc.next();
+
+            System.out.println("Önskningar: " + getPresentList(wishes, present));
+            System.out.println("Gåvor: " + getPresentList(gifts, present));
         }
     }
 
