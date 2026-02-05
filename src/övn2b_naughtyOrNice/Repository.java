@@ -16,7 +16,7 @@ public class Repository {
     
     public Repository(){
         try{
-            p.load(new FileInputStream("src/övn2a_naughtyOrNice/Settings.properties"));
+            p.load(new FileInputStream("src/övn2b_naughtyOrNice/Settings.properties"));
         }
          catch (Exception e){
             e.printStackTrace();
@@ -24,15 +24,15 @@ public class Repository {
     }
 
     public Child getChildByName(String name){   // Ambrosia'; drop database tomtedb;'
-        ResultSet rs = null;
-        
+
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
                              p.getProperty("name"),
                              p.getProperty("password"));
-                PreparedStatement stmt = con.prepareStatement("select * from child where name = ?")){
+                PreparedStatement stmt = con.prepareStatement("select * from child where name = ?");
+                ){
             
-            stmt.setString(1, name);
-            rs = stmt.executeQuery();
+            stmt.setString(1, name);  //kan inte ha i try-w-resources
+            ResultSet rs = stmt.executeQuery();
             Child child = null;
             
             while (rs.next()) {

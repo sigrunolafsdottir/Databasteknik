@@ -23,7 +23,6 @@ public class Repository {
     public String updateElfName(String oldElfName, String newElfName){
        
         String query = "UPDATE elf SET name = ? where name like ? ;";
-        String errormessage = "";
         int rowChanged = 0;
                 
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
@@ -36,14 +35,12 @@ public class Repository {
             rowChanged = stmt.executeUpdate();
             
             if (rowChanged == 0){
-                errormessage = "There was no elf named " + oldElfName;
+                return "There was no elf named " + oldElfName;
             }
             if (rowChanged > 1){
-                errormessage = "Oooops, several "+oldElfName+"s changed";
+                return "Oooops, several "+oldElfName+"s changed";
             }
-            if (!errormessage.equalsIgnoreCase("")){
-                return errormessage;
-            }
+
         }
         catch (Exception e){
             e.printStackTrace();

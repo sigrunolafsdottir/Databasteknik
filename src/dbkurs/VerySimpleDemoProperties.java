@@ -14,7 +14,7 @@ import java.util.Properties;
 //Try with resources saves a lot of closing...
 public class VerySimpleDemoProperties {
 
-    public static void main(String[] args) throws  FileNotFoundException, IOException {
+    public static void main(String[] args) throws IOException, SQLException {
 
         Properties p = new Properties();
         p.load(new FileInputStream("src/dbkurs/Settings.properties"));
@@ -24,7 +24,7 @@ public class VerySimpleDemoProperties {
                 p.getProperty("name"),
                 p.getProperty("password"));
              Statement stmt =  con.createStatement();
-             ResultSet rs = stmt.executeQuery("select id, name, address from child")) {
+             ResultSet rs = stmt.executeQuery("select * from child")) {
 
             while (rs.next()) {
                 int id = rs.getInt("id");
@@ -33,9 +33,8 @@ public class VerySimpleDemoProperties {
 
                 System.out.println("id: " + id + ", name: " + name + ", address: " + address);
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
     }
 
 }
+

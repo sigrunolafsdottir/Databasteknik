@@ -28,7 +28,7 @@ public class Repository {
     public String addManufacturingElf(String elfName){
        
         ResultSet rs = null;
-        String query = "call addManufacturingElfResignal(?)";
+        String query = "call addManufacturingElf(?)";
         
         String errormessage = "";
                 
@@ -43,7 +43,7 @@ public class Repository {
         }
         catch (SQLException e){
             //om vi resignal fångar vi det här
-            System.out.println(e.getMessage() +"("+e.getErrorCode()+")");
+            System.out.println(e.getMessage() +" ("+e.getErrorCode()+")");
             return "Could not add elf "+elfName;
         }
         catch (Exception e){

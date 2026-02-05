@@ -26,7 +26,6 @@ public class Repository {
     public String deleteElf(String elfName){
        
         String query = "delete from  elf  where name = ?;";
-        String errormessage = "";
         int rowChanged = 0;
                 
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
@@ -38,14 +37,12 @@ public class Repository {
             rowChanged = stmt.executeUpdate();
             
             if (rowChanged == 0){
-                errormessage = "There was no elf named " + elfName;
+                return "There was no elf named " + elfName;
             }
             if (rowChanged > 1){
-                errormessage = "Oooops, several "+elfName+"s changed";
+                return "Oooops, several "+elfName+"s changed";
             }
-            if (!errormessage.equalsIgnoreCase("")){
-                return errormessage;
-            }
+
         }
         catch (Exception e){
             e.printStackTrace();

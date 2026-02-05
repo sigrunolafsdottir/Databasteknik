@@ -22,7 +22,6 @@ public class Repository {
     
     public String addPresent(String presentName){
         String query = "insert into present (name) values (?)";
-        String errormessage = "";
         int rowChanged = 0;
                 
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
@@ -34,14 +33,12 @@ public class Repository {
             rowChanged = stmt.executeUpdate();
             
             if (rowChanged == 0){
-                errormessage = presentName + "could not be added";
+                return presentName + "could not be added";
             }
             if (rowChanged > 1){
-                errormessage = "Oooops, several "+presentName+" were added, very strange.";
+                return "Oooops, several "+presentName+" were added, very strange.";
             }
-            if (!errormessage.equalsIgnoreCase("")){
-                return errormessage;
-            }
+
         }
         catch (Exception e){
             e.printStackTrace();

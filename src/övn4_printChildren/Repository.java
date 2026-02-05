@@ -162,8 +162,7 @@ public class Repository {
             }
             
             children = allChildIds.stream()
-                    .map(i -> getChildById(i))
-                    .collect(Collectors.toList());
+                    .map(i -> getChildById(i)).toList();
         }
         catch (Exception e){
             e.printStackTrace();

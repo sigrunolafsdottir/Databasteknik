@@ -5,14 +5,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 
-public class Repository implements IRepository {
+public class Repository {
 
     private Properties p = new Properties();
+
     
     public Repository(){
         try {
@@ -26,7 +25,6 @@ public class Repository implements IRepository {
       
     public List<Elf> getAllElfs(){
         List<Elf> allElves = new ArrayList<>();
-        
         try (Connection con = DriverManager.getConnection(p.getProperty("connectionString"),
                              p.getProperty("name"),
                              p.getProperty("password"));
@@ -85,6 +83,7 @@ public class Repository implements IRepository {
         }
         return nicenessAverage;
     }
-    
+
+
 
 }

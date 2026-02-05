@@ -11,12 +11,12 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.*;
 
-public class AlternativeSolutionRepo {
+public class MapRepo {
 
     private Connection con;
     private Properties p = new Properties();
 
-    public AlternativeSolutionRepo(){
+    public MapRepo(){
         try{
             p.load(new FileInputStream("src/övn4_printChildren/Settings.properties"));
         }

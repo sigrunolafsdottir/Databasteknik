@@ -14,10 +14,12 @@ public class MainProgramHigherOrderFunctions {
     final List<ChildPresentMapping> gifts = r.getAllGifts();
     final Scanner sc = new Scanner(System.in);
 
-    Searcher findPresentsForChild = (l, child) -> l.stream().filter(x -> x.getChild().getName().equalsIgnoreCase(child))
+    Searcher findPresentsForChild = (l, child) -> l.stream().filter(x -> x.getChild().getName()
+                    .equalsIgnoreCase(child))
             .map(y -> y.getPresent().getName()).collect(Collectors.joining(", "));
 
-    Searcher findChildrenForPresent = (l, present) -> l.stream().filter(x -> x.getPresent().getName().equalsIgnoreCase(present))
+    Searcher findChildrenForPresent = (l, present) -> l.stream().filter(x -> x.getPresent().getName()
+                    .equalsIgnoreCase(present))
             .map(y -> y.getChild().getName()).collect(Collectors.joining(", "));
 
 

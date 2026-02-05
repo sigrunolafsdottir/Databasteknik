@@ -19,7 +19,6 @@ public class NaughtyOrNice2b {
             catch (NullPointerException e){
                 System.out.println(name +"does not exist in the databse");
             }
-
         }
     }
     

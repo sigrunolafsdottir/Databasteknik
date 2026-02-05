@@ -10,7 +10,6 @@ import java.util.Properties;
 
 public class Repository {
     
-    private Connection con;
     private Properties p = new Properties();
     
     public Repository(){

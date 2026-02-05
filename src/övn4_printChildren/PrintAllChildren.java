@@ -2,10 +2,8 @@ package övn4_printChildren;
 
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import övn4_printChildren.Models.Child;
-import övn4_printChildren.Models.Present;
 
 
 public class PrintAllChildren {
@@ -15,10 +13,14 @@ public class PrintAllChildren {
         List<Child> l = r.getAllChildren();
         l.forEach(c -> c.print());
 
+        /*
         System.out.println(" ");
-        AlternativeSolutionRepo ar = new AlternativeSolutionRepo();
+        MapRepo ar = new MapRepo();
         Map<Integer, Child> cMap = ar.getAllChildren();
         cMap.forEach((k,v) -> v.print());
+*/
+        //Map, exempel
+        //[ (45, {childobj1}), (123, {childobj2}), osv osv ]
 
     }
 

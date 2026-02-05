@@ -6,23 +6,20 @@ import static java.util.stream.Collectors.toList;
 
 public class Dashboard {
 
-    public boolean test = false;
-    
     public Dashboard() throws InterruptedException{
-        IRepository r;
-        if (test){
-            r = new RepositoryMockup();
-        }
-        else{
-            r = new Repository();
-        }
+
+        Repository r = new Repository();
 
         //List<Elf> allElves = r.getAllElfs();
         
         while(true){
             System.out.println("Number of employees : " +r.getAllElfs().size());
             System.out.println("Employee names : " +
-                    r.getAllElfs().stream().map(Elf::getName).collect(toList()));
+                    r.getAllElfs().stream().map(Elf::getName).toList());
+
+            List<Elf> demoElves = r.getAllElfs();
+            demoElves.forEach(e -> System.out.println("x "+e.getName()));
+
             System.out.println("Number of kids : " +r.getNumberOfKids());
             System.out.println("Average niceness : " +r.getNicenessAverage());
             Thread.sleep(2000);

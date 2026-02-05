@@ -26,8 +26,8 @@ public class Repository {
     //Fångar felmeddelanden med select
     public String addManufacturingElf(String elfName){
        
-        ResultSet rs = null;
-        String query = "call addManufacturingElf(?)";
+        //ResultSet rs = null;
+        String query = "call addManufacturingElf2(?)";
         
         String errormessage = "";
                 
@@ -37,7 +37,7 @@ public class Repository {
              CallableStatement stmt = con.prepareCall(query)){
 
             stmt.setString(1, elfName);
-            rs = stmt.executeQuery();
+            ResultSet rs = stmt.executeQuery();
             
             //om vi skickar ett selectat errormessage fångar vi det här
             while (rs != null && rs.next()) {

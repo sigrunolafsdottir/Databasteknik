@@ -1,5 +1,7 @@
 package övn5_addPresent_SP;
 
+import övn4_printChildren.Models.Child;
+
 import java.io.FileInputStream;
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -15,7 +17,6 @@ public class Repository {
     public Repository(){
         try {
             p.load(new FileInputStream("src/övn5_addPresent_SP/Settings.properties"));
-            //Class.forName("com.mysql.jdbc.Driver");
         }
         catch (Exception e){
             e.printStackTrace();
@@ -36,6 +37,10 @@ public class Repository {
             stmt.setString(1, childName);
             stmt.setString(2, presentName);
             rs = stmt.executeQuery();
+
+            while (rs.next()){
+                System.out.println(rs.getString("test"));
+            }
         }
         catch (Exception e){
             System.out.println("e.mess "+e.getMessage());
