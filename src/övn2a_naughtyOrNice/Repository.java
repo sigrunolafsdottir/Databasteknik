@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.Properties;
 
 
+//Repository pattern encapsulates database access
 public class Repository {
     
     private Properties p = new Properties();
