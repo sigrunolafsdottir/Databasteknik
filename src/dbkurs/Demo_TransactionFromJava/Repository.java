@@ -23,7 +23,10 @@ public class Repository {
       
     public String addManufacturingElf(String elfName){
 
-        String query = "call addManufacturingElfNoErrorHandling(?)";
+        //String query = "call addManufacturingElfNoErrorHandling(?)";
+        //transaktionshantering i SP
+        String query = "call addManufacturingElftestDemo(?, ?)";
+        boolean success = false;
 
         //Vi får inte tag i con-objektet om vi använder try-with-resources
         //ref: https://www.mysqltutorial.org/mysql-jdbc-transaction/
@@ -34,26 +37,22 @@ public class Repository {
             CallableStatement stmt = con.prepareCall(query);
 
             stmt.setString(1, elfName);
-            con.setAutoCommit(false);
+            stmt.registerOutParameter(2, Types.BOOLEAN);
+
             rs = stmt.executeQuery();
-            con.commit();
+            success = stmt.getBoolean(2);
+            System.out.println(success);  //syns bara om success
         }
         catch (SQLException e){
-            e.printStackTrace();
-            if (con != null) {
-                try {
-                    System.out.print("Transaction is being rolled back");
-                    con.rollback();
-                }
-                catch(SQLException e2) {
-                    System.out.println(e2.getMessage());
-                }
-            }
-            System.out.println("e.mess "+e.getMessage());
+            System.out.println(e.getMessage());
+            System.out.println(success);
+            //e.printStackTrace();
+            System.out.print("Transaction is being rolled back");
             return "Could not add elf "+elfName;
         }
         catch (Exception e){
-            System.out.println("e.mess "+e.getMessage());
+            System.out.println(e.getMessage());
+            System.out.println(success);
             return "Could not add elf "+elfName;
         }
         finally {
